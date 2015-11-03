@@ -12,7 +12,6 @@ MACHINE_EXTRA_RRECOMMENDS = " \
 	gstreamer1.0-plugin-dvbmediasink \
 	gstreamer1.0-libav \
 	splash-bootlogo \
-	enigma2-plugin-systemplugins-tempfancontrol \
 	"
 
 KERNEL_MODULE_AUTOLOAD += "xfs"
