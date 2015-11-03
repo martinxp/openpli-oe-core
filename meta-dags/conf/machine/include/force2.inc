@@ -4,6 +4,7 @@ MACHINE_FEATURES_BACKFILL_CONSIDERED = "rtc"
 MACHINE_ESSENTIAL_EXTRA_RDEPENDS = " \
 	dags-dvb-modules-${MACHINE} \
 	dags-shutdown \
+	ntfs-3g \
 	"
 
 

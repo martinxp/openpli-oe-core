@@ -14,7 +14,7 @@ DEPENDS = "gstreamer1.0 gstreamer1.0-plugins-base libdca"
 GSTVERSION = "1.0"
 
 SRC_URI = "\
-  git://github.com/martinxp/gstreamer1.0-plugin-multibox-dvbmediasink.git;protocol=git \
+  git://github.com/christophecvr/gstreamer1.0-plugin-multibox-dvbmediasink.git;protocol=git \
   file://0001-update-dags-support.patch;patch=1 \ 
   "
 
