@@ -58,6 +58,6 @@ IMAGE_CMD_ubi_append = " \
 
 
 
-MACHINE_FEATURES += "3dtv alsa hdmicec ci switchoff bootsplash osdposition"
+MACHINE_FEATURES += "3dtv alsa hdmicec ci switchoff osdposition"
 
 require conf/machine/include/tune-mips32.inc
