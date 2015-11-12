@@ -58,13 +58,14 @@ OPTIONAL_PACKAGES += " \
 	strace \
 	tcpdump \
 	x264 \
-  mpfr \
-  tslib \
-  directfb \	
-  gmp \
-  opera-dumpait \
-  enigma2-plugin-extensions-hbbtv \
-  sysfsutils \
+	mpfr \
+	tslib \
+	directfb \	
+	gmp \
+	opera-dumpait \
+	opera-browser-util \
+	enigma2-plugin-extensions-hbbtv \
+	sysfsutils \
 	transmission \
 	udpxy \
 	vim \

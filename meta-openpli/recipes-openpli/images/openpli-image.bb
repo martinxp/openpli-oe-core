@@ -9,13 +9,6 @@ IMAGE_INSTALL = " \
 	cifs \
 	distro-feed-configs \
 	dropbear \
-  mpfr \
-  tslib \
-	gmp \
-  opera-dumpait \
-  enigma2-plugin-extensions-hbbtv \
-  opera-browser-util \
-  sysfsutils \
 	e2fsprogs-e2fsck \
 	e2fsprogs-mke2fs \
 	e2fsprogs-tune2fs \
