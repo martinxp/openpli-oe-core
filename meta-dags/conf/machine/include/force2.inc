@@ -10,7 +10,6 @@ MACHINE_ESSENTIAL_EXTRA_RDEPENDS = " \
 
 MACHINE_EXTRA_RRECOMMENDS = " \
 	gstreamer1.0-plugin-dvbmediasink \
-	gstreamer1.0-libav \
 	splash-bootlogo \
 	"
 

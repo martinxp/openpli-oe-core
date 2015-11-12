@@ -94,8 +94,8 @@ GST_GOOD_RDEPS = " \
         gstreamer1.0-plugins-good-souphttpsrc \
         gstreamer1.0-plugins-good-udp \
         gstreamer1.0-plugins-good-wavparse \
-	gstreamer1.0-plugins-good-wavpack \        
-	"
+      	gstreamer1.0-plugins-good-wavpack \        
+        "
 
 
 GST_BAD_RDEPS = " \
@@ -163,7 +163,10 @@ PKGV = "2.7+git${GITPKGV}"
 
 ENIGMA2_BRANCH ?= "master"
 SRC_URI = "git://github.com/OpenPLi/enigma2;protocol=git;branch=${ENIGMA2_BRANCH} \
-file://enigma2.sh \
+  file://enigma2.sh \
+  file://enigma2_pre_start.sh \
+  file://enigma2_end.sh \
+  file://settings \
 "	
 
 S = "${WORKDIR}/git"
@@ -246,8 +249,13 @@ do_openpli_branding() {
 addtask openpli_branding after do_unpack before do_configure
 
 do_install_append() {
-	install -d ${D}/usr/share/keymaps
+	install -d 0755 ${D}/etc/
+	install -d 0755 ${D}/etc/enigma2/
+  install -d ${D}/usr/share/keymaps
+  install -m 0755 ${WORKDIR}/enigma2_pre_start.sh ${D}/usr/bin
 	install -m 0755 ${WORKDIR}/enigma2.sh ${D}/usr/bin
+	install -m 0755 ${WORKDIR}/enigma2_end.sh ${D}/usr/bin
+	install -m 0755 ${WORKDIR}/settings ${D}/etc/enigma2
 	find ${D}/usr/lib/enigma2/python/ -name '*.pyc' -exec rm {} \;
 }
 

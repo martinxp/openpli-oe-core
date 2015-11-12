@@ -57,6 +57,14 @@ OPTIONAL_PACKAGES += " \
 	smbnetfs \
 	strace \
 	tcpdump \
+	x264 \
+  mpfr \
+  tslib \
+  directfb \	
+  gmp \
+  opera-dumpait \
+  enigma2-plugin-extensions-hbbtv \
+  sysfsutils \
 	transmission \
 	udpxy \
 	vim \
@@ -78,7 +86,6 @@ ENIGMA2_OPTIONAL = " \
 	enigma2-plugin-security-firewall \
 	enigma2-plugin-skins-pli-hd \
 	enigma2-plugin-skins-pli-hd-fullnight \
-	enigma2-plugin-skins-pli-pd1loi-hd \
 	enigma2-plugins \
 	enigma2-skins \
 	picons-enigma2-meta \

@@ -86,7 +86,9 @@ IMAGE_INSTALL += " \
 	libavahi-client \
 	settings-autorestore \
 	tuxbox-common \
-	${ENIGMA2_PLUGINS} \
+	mtd-utils \
+  mtd-utils-ubifs \
+  ${ENIGMA2_PLUGINS} \
 	\
 	${@base_contains("MACHINE_FEATURES", "transcoding", "streamproxy", "", d)} \
 	${@base_contains('MACHINE_FEATURES', 'ctrlrc', "enigma2-plugin-systemplugins-remotecontrolcode", "", d)} \

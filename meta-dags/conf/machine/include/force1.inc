@@ -4,13 +4,11 @@ MACHINE_FEATURES_BACKFILL_CONSIDERED = "rtc"
 MACHINE_ESSENTIAL_EXTRA_RDEPENDS = " \
 	dags-dvb-modules-${MACHINE} \
 	dags-shutdown \
-	ntfs-3g \
 	"
 
 
 MACHINE_EXTRA_RRECOMMENDS = " \
 	gstreamer1.0-plugin-dvbmediasink \
-	gstreamer1.0-libav \
 	splash-bootlogo \
 	"
 
@@ -68,7 +66,9 @@ IMAGE_CMD_ubi_append = " \
 	cp ${DEPLOY_DIR_IMAGE}/vmlinux-${MACHINE}.bin.gz ${DEPLOY_DIR_IMAGE}/oe_kernel.bin; \
         "
 
+#TARGET_FPU = "hard"
 
-MACHINE_FEATURES += "alsa usbhost dvbusb usbhost kernelwifi wlan 3dtv switchoff osdposition hdmicec fan"
+
+MACHINE_FEATURES += "alsa usbhost dvbusb usbhost kernelwifi wlan 3dtv switchoff osdposition newkernel hdmicec fan"
 
 require conf/machine/include/tune-mips32.inc

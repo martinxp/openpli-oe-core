@@ -5,12 +5,17 @@ inherit image
 IMAGE_INSTALL = " \
 	${ROOTFS_PKGMANAGE} \
 	3rd-party-feed-configs \
-	hbbtv-feed-configs \
 	avahi-daemon \
 	cifs \
 	distro-feed-configs \
 	dropbear \
-	dags-shutdown \
+  mpfr \
+  tslib \
+	gmp \
+  opera-dumpait \
+  enigma2-plugin-extensions-hbbtv \
+  opera-browser-util \
+  sysfsutils \
 	e2fsprogs-e2fsck \
 	e2fsprogs-mke2fs \
 	e2fsprogs-tune2fs \
