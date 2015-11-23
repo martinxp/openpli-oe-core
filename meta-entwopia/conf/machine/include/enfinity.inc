@@ -50,7 +50,7 @@ IMAGE_CMD_ubi_append = " \
 	echo ${DISTRO_NAME}-${DISTRO_VERSION}-${DATE} > ${DEPLOY_DIR_IMAGE}/${IMAGEDIR}/imageversion; \
 	echo "rename this file to 'force' to force an update without confirmation" > ${DEPLOY_DIR_IMAGE}/${IMAGEDIR}/noforce; \
 	cd ${DEPLOY_DIR_IMAGE}; \
-	zip ${DISTRO_NAME}-${DISTRO_VERSION}-${MACHINE}-${DATE}-usb.zip ${IMAGEDIR}/*; \
+	zip ${DISTRO_NAME}-${DISTRO_VERSION}-${MACHINE}-${DATE}_usb.zip ${IMAGEDIR}/*; \
 	rm -Rf ${IMAGEDIR}; \
 	"
 
@@ -58,6 +58,6 @@ IMAGE_CMD_ubi_append = " \
 
 
 
-MACHINE_FEATURES += "3dtv alsa hdmicec ci switchoff osdposition"
+MACHINE_FEATURES += "3dtv alsa hdmicec ci switchoff bootsplash osdposition"
 
 require conf/machine/include/tune-mips32.inc

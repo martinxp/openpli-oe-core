@@ -65,6 +65,7 @@ OPTIONAL_PACKAGES += " \
 	opera-dumpait \
 	opera-browser-util \
 	enigma2-plugin-extensions-hbbtv \
+	enigma2-plugin-extensions-backupsuite \
 	sysfsutils \
 	transmission \
 	udpxy \

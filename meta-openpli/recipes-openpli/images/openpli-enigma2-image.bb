@@ -63,10 +63,10 @@ ENIGMA2_PLUGINS = " \
 	${@base_contains("MACHINE_FEATURES", "hdmicec", "enigma2-plugin-systemplugins-hdmicec" , "", d)} \
 	${@base_contains("MACHINE_FEATURES", "osdposition", "enigma2-plugin-systemplugins-osdpositionsetup" , "", d)} \
 	${@base_contains("MACHINE_FEATURES", "wlan", "enigma2-plugin-systemplugins-wirelesslan", "", d)} \
+	${@base_contains('MACHINE_FEATURES', 'fan', 'enigma2-plugin-systemplugins-tempfancontrol', '', d)} \
 	\
 	${@base_contains('OPENPLI_FEATURES', 'ci', 'enigma2-plugin-systemplugins-commoninterfaceassignment', '', d)} \
-	${@base_contains('OPENPLI_FEATURES', 'dvd', 'enigma2-plugin-extensions-cdinfo enigma2-plugin-extensions-dvdplayer', '', d)} \
-	${@base_contains('OPENPLI_FEATURES', 'fan', 'enigma2-plugin-systemplugins-tempfancontrol', '', d)} \
+	${@base_contains('OPENPLI_FEATURES', 'dvd', 'enigma2-plugin-extensions-cdinfo enigma2-plugin-extensions-dvdplayer', '', d)} \	
 	"
 
 DEPENDS += " \
@@ -87,7 +87,7 @@ IMAGE_INSTALL += " \
 	settings-autorestore \
 	tuxbox-common \
 	mtd-utils \
-  mtd-utils-ubifs \
+	mtd-utils-ubifs \
   ${ENIGMA2_PLUGINS} \
 	\
 	${@base_contains("MACHINE_FEATURES", "transcoding", "streamproxy", "", d)} \

@@ -58,7 +58,7 @@ IMAGE_CMD_ubi_append = " \
         cp ${DEPLOY_DIR_IMAGE}/${MACHINE}_splash3.bmp ${DEPLOY_DIR_IMAGE}/${IMAGEDIR}/splash3.bmp; \
         gzip -f -9c ${DEPLOY_DIR_IMAGE}/vmlinux-${MACHINE}.bin > ${DEPLOY_DIR_IMAGE}/update/${MACHINE}/cfe/oe_kernel.bin; \
         cd ${DEPLOY_DIR_IMAGE}; \
-        zip ${IMAGE_NAME}-${KV}-${DATE}-usb.zip update/${MACHINE}/cfe/*; \
+        zip ${DISTRO_NAME}-${DISTRO_VERSION}-${MACHINE}-${DATE}_usb.zip update/${MACHINE}/cfe/*; \
 	rm -rf update; \
 	rm -rf ${DEPLOY_DIR_IMAGE}/enigma2_2.7*; \
 	cp ${DEPLOY_DIR_IPK}/${MACHINE}/enigma2_2.7* ${DEPLOY_DIR_IMAGE}; \
@@ -66,7 +66,7 @@ IMAGE_CMD_ubi_append = " \
 	cp ${DEPLOY_DIR_IMAGE}/vmlinux-${MACHINE}.bin.gz ${DEPLOY_DIR_IMAGE}/oe_kernel.bin; \
         "
 
-#TARGET_FPU = "hard"
+TARGET_FPU = "hard"
 
 
 MACHINE_FEATURES += "alsa usbhost dvbusb usbhost kernelwifi wlan 3dtv switchoff osdposition newkernel hdmicec fan"

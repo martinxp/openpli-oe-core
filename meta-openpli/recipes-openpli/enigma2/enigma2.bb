@@ -166,7 +166,7 @@ SRC_URI = "git://github.com/OpenPLi/enigma2;protocol=git;branch=${ENIGMA2_BRANCH
   file://enigma2.sh \
   file://enigma2_pre_start.sh \
   file://enigma2_end.sh \
-  file://settings \
+  file://skin_display.xml \
 "	
 
 S = "${WORKDIR}/git"
@@ -227,14 +227,7 @@ FILES_${PN}-src = "\
 	/usr/lib/enigma2/python/*/*/*/*.py \
 	"
 
-RADIOMVI = "radio-hd.mvi"
 
-do_openpli_preinstall() {
-	ln -f ${S}/data/${RADIOMVI} ${S}/data/radio.mvi
-	install -d ${D}${sysconfdir}/enigma2
-}
-
-addtask openpli_preinstall after do_compile before do_install
 
 do_openpli_branding() {
 	if [ -n "${BRANDINGDIR}" -a -d "${BRANDINGDIR}/enigma2" ] ; then
@@ -255,7 +248,7 @@ do_install_append() {
   install -m 0755 ${WORKDIR}/enigma2_pre_start.sh ${D}/usr/bin
 	install -m 0755 ${WORKDIR}/enigma2.sh ${D}/usr/bin
 	install -m 0755 ${WORKDIR}/enigma2_end.sh ${D}/usr/bin
-	install -m 0755 ${WORKDIR}/settings ${D}/etc/enigma2
+	install -m 0755 ${WORKDIR}/skin_display.xml ${D}/usr/share/enigma2
 	find ${D}/usr/lib/enigma2/python/ -name '*.pyc' -exec rm {} \;
 }
 
