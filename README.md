@@ -1,1 +1,3 @@
-Backup  openpli 4 oe-core for iqon1 force and force2plus
+Backup  openpli oe-core for iqon force1,force2plus adn evo enfinity
+
+Images download - http://openpli.ido.cz/openpli-4/images/
