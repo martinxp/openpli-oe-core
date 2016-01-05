@@ -66,8 +66,8 @@ GST_BASE_RDEPS = " \
         gstreamer1.0-plugins-base-audioconvert \
         gstreamer1.0-plugins-base-audioresample \
         gstreamer1.0-plugins-base-audiorate \
-	gstreamer1.0-plugins-base-ivorbisdec \
-	gstreamer1.0-plugins-base-videoconvert \
+        gstreamer1.0-plugins-base-ivorbisdec \
+        gstreamer1.0-plugins-base-videoconvert \
         gstreamer1.0-plugins-base-ogg \
         gstreamer1.0-plugins-base-playback \
         gstreamer1.0-plugins-base-subparse \
@@ -78,7 +78,7 @@ GST_BASE_RDEPS = " \
 
         
 GST_GOOD_RDEPS = " \
-	gstreamer1.0-plugins-good-apetag \
+        gstreamer1.0-plugins-good-apetag \
         gstreamer1.0-plugins-good-audioparsers \
         gstreamer1.0-plugins-good-autodetect \
         gstreamer1.0-plugins-good-avi \
@@ -93,13 +93,12 @@ GST_GOOD_RDEPS = " \
         gstreamer1.0-plugins-good-rtsp \
         gstreamer1.0-plugins-good-souphttpsrc \
         gstreamer1.0-plugins-good-udp \
-        gstreamer1.0-plugins-good-wavparse \
-      	gstreamer1.0-plugins-good-wavpack \        
+        gstreamer1.0-plugins-good-wavparse \       
         "
 
 
 GST_BAD_RDEPS = " \
-	gstreamer1.0-plugins-bad-dashdemux \
+        gstreamer1.0-plugins-bad-dashdemux \
         gstreamer1.0-plugins-bad-mms \
         gstreamer1.0-plugins-bad-mpegpsdemux \
         gstreamer1.0-plugins-bad-mpegtsdemux \
@@ -108,12 +107,12 @@ GST_BAD_RDEPS = " \
         gstreamer1.0-plugins-bad-faad \
         gstreamer1.0-plugins-bad-fragmented \
         gstreamer1.0-plugins-bad-videoparsersbad \
-	gstreamer1.0-plugins-bad-autoconvert \        
+	      gstreamer1.0-plugins-bad-autoconvert \        
 	"	
 
         
 GST_UGLY_RDEPS = " \
-	gstreamer1.0-plugins-ugly-amrnb \
+        gstreamer1.0-plugins-ugly-amrnb \
         gstreamer1.0-plugins-ugly-amrwbdec \
         gstreamer1.0-plugins-ugly-asf \
         gstreamer1.0-plugins-ugly-cdio \
@@ -162,7 +161,8 @@ PV = "2.7+git${SRCPV}"
 PKGV = "2.7+git${GITPKGV}"
 
 ENIGMA2_BRANCH ?= "master"
-SRC_URI = "git://github.com/OpenPLi/enigma2;protocol=git;branch=${ENIGMA2_BRANCH} \
+SRC_URI = "git://github.com/OpenPli/enigma2;protocol=git;branch=${ENIGMA2_BRANCH} \
+  file://force12.patch \
   file://enigma2.sh \
   file://enigma2_pre_start.sh \
   file://enigma2_end.sh \
@@ -192,7 +192,6 @@ EXTRA_OECONF = "\
 	ac_cv_prog_c_openmp=-fopenmp \
 	--with-gstversion=1.0 \
 	${@base_contains("MACHINE_FEATURES", "textlcd", "--with-textlcd" , "", d)} \
-	${@base_contains("MACHINE_FEATURES", "colorlcd", "--with-colorlcd" , "", d)} \
 	BUILD_SYS=${BUILD_SYS} \
 	HOST_SYS=${HOST_SYS} \
 	STAGING_INCDIR=${STAGING_INCDIR} \
